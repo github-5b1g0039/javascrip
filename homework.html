@@ -1,3 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript作業</title>
+    <style>
+        div#myId {
+            width: 90%;
+            background-color: antiquewhite;
+            padding: 10px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        table, tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table {
+            text-align: center;
+            margin: 0 auto;
+        }
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+        label {
+            color: white; /* 設置 label 元素的顏色為白色 */
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var n = document.getElementById('numberInput').value;
+            // alert("輸入的數值是: " + n);
+
+            var str = "<table>";
+
+            for (let i = 1; i <= n; i++) {
+                str += "<tr>";
+                for (let j = 1; j <= n; j++) {
+                    str += `<td> ${i} * ${j} = ${i * j}</td>`;
+                }
+                str += "</tr>";
+            }
+            str += "</table>";
+
+            document.getElementById("myId").innerHTML = str;
+        }
+    </script>
+</head>
+
 <style>
     html, body {
         height: 100%;
@@ -23,9 +74,16 @@
         padding: 10px;
         border: 1px solid rgb(0, 0, 0);
     }
-    </style>
-<h1>103下學期五專三年級Javascript程式設計課程</h1>
-<a href="index.html">回首頁</a>
-<a href="about.html">關於我</a>
-<a href="research.html">研究</a> 
-<div id="myresearch">
+</style>
+<body>
+    <h1>103下學期五專三年級Javascript程式設計課程</h1>
+    <a href="about.html">關於我</a>
+    <a href="research.html">研究</a>
+    <a href="homework.html">乘法表</a>
+    <h1>N*N乘法表</h1>
+    <label for="numberInput">輸入一個數值:</label>
+    <input type="number" id="numberInput" placeholder="輸入一個數值" />
+    <input type="button" value="OK" title="OK" onclick="myFunction()" />
+    <div id="myId"></div>
+</body>
+</html>

@@ -13,9 +13,11 @@
             border: 1px solid pink;
             border-collapse: collapse;
             background-color: white; /* 設置表格背景顏色為白色 */
+            margin: 0 auto; /* 讓表格置中 */
         }
         td {
             margin: 10px;
+            text-align: center; /* 讓表格內的內容置中 */
         }
     </style>
 
@@ -33,6 +35,7 @@
         }
         h1 {
             color: white;
+            text-align: center; /* 讓標題置中 */
         }
         a:link {
             color: rgb(255, 248, 248);
@@ -44,15 +47,22 @@
             padding: 10px;
             border: 1px solid rgb(0, 0, 0);
         }
+        a {
+            display: inline-block;
+            margin: 5px; /* 增加按鈕間距 */
+        }
     </style>
 </head>
 <body>
     <h1>103下學期五專三年級Javascript程式設計課程</h1>
-    <a href="index.html">回首頁</a>
-    <a href="research.html">研究</a>
-    <a href="homework.html">乘法表</a>
+    <div style="text-align: center;"> <!-- 讓按鈕置中 -->
+        <a href="index.html">回首頁</a>
+        <a href="research.html">研究</a>
+        <a href="homework.html">乘法表</a>
+        <a href="waterpuzzle/WaterPUzzle.html">Water Puzzle Game</a>
+    </div>
     <div id="myresearch">
-        <h3>林稚澄 JHIH-CHENG LIN</h3>
+        <h3 style="text-align: center;">林稚澄 JHIH-CHENG LIN</h3>
         <table>
             <tr>
                 <td width="300px">

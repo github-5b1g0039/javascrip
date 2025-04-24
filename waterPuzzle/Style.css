@@ -1,0 +1,65 @@
+body{
+    background-color:rgb(253, 145, 82);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    border: 1px dashed rgb(30, 33, 245);
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.game-area{
+    width: 80%;
+    border-radius: 10px;
+    padding:20px;
+    margin: 5px;
+}
+
+#game-info{
+    background-color:rgb(255, 97, 97);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#controls{
+    background-color:rgb(255, 208, 52);
+}
+
+#game-container{
+    background-color:rgb(29, 82, 57);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tube{
+    width: 50px;
+    height: 200px;
+    border: 2px solid black;
+    border-top: 0px;
+    border-radius: 0 0 10px 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    margin-top: 20px;
+    
+    /* 新增過渡動畫 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.water{
+    width: 100%;
+}
+
+.tube.selected{
+    border-color: rgb(255, 233, 108); 
+    box-shadow: 0 0 10px rgb(255, 157, 157); 
+    transform: translateY(-20px);
+    
+    /* 增加過渡效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="waterpuzzle.js" defer></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            background-image: url('img/background.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        a:link {
+            color: rgb(255, 248, 248);
+        }
+        a {
+            color: white;
+            background-color: rgb(253, 154, 61);
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            display: inline-block;
+            margin: 5px;
+        }
+        #home-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a id="home-link" href="../index.html">回首頁</a>
+    <h1>2025 Water Puzzle Game</h1>
+    <div id="game-info" class="game-area">
+        <p>關卡：<span id="level-count">1</span></p>
+        <p>完成的試管：<span id="completed-tubes-count">0</span></p>
+    </div>
+    <div id="controls" class="game-area">
+        <label for="level-select">選擇關卡</label>
+        <select id="level-select">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+            <option value="6">Level 6</option>
+            <option value="7">Level 7</option>
+            <option value="8">Level 8</option>
+            <option value="9">Level 9</option>
+            <option value="10">Level 10</option>
+        </select>
+        <button id="play-button">PLAY</button>
+    </div>
+    <div id="game-container" class="game-area">
+
+    </div>
+</body>
+</html>

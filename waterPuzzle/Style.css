@@ -63,3 +63,13 @@ body{
     /* 增加過渡效果 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px black; /* 添加黑色陰影 */
+    padding: 10px;
+    border: 2px solid black; /* 添加黑色外框 */
+    display: inline-block; /* 讓外框緊貼文字 */
+    background-color: rgba(0, 0, 0, 0.5); /* 添加半透明背景以提高可讀性 */
+    border-radius: 10px; /* 圓角外框 */
+}

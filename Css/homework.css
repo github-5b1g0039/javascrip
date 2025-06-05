@@ -1,0 +1,85 @@
+div#myId {
+    width: 90%;
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+td {
+    padding: 5px;
+    text-align: center;
+}
+label {
+    color: white; /* 設置 label 元素的顏色為白色 */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-image: url('../img/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1 {
+    color: white;
+    text-align: center; /* 讓標題置中 */
+}
+a:link {
+    color: rgb(255, 248, 248);
+}
+a {
+    color: white;
+    background-color: rgb(253, 154, 61);
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    display: inline-block;
+    margin: 5px;
+}
+.button-container {
+    text-align: center; /* 讓按鈕置中 */
+    margin-top: 20px;
+}
+.mainFrame{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    font-size: 2rem;
+    color: #333;
+    border: 5px solid rgb(255, 139, 71);
+    background-color: rgba(255,255,255,0.15);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px; /*調整邊框圓弧*/
+}
+.mainFrame{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    font-size: 2rem;
+    color: #333;
+    border: 5px solid rgb(255, 139, 71);
+    background-color: rgba(255,255,255,0.15);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px; /*調整邊框圓弧*/
+}

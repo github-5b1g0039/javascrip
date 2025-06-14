@@ -45,3 +45,33 @@ a {
     background-position: center;
     border-radius: 5px; /*調整邊框圓弧*/
 }
+.night-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+.night-btn img {
+    width: 40px;
+    height: 40px;
+}
+body.night-mode {
+    background-image: url('../img/backgroundnight.png');
+    background-color: #222 !important;
+    color: #eee;
+}
+body.night-mode .mainFrame {
+    background-color: rgba(30,30,30,0.8);
+    color: #eee;
+}
+body.night-mode h1 {
+    color: #ffd700;
+}
+body.night-mode a {
+    background-color: #444;
+    color: #ffd700;
+    border-color: #ffd700;
+}

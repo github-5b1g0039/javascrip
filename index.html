@@ -7,6 +7,9 @@
     <title>Javascript程式設計範例</title>
 </head>
 <body>
+    <button class="night-btn" onclick="toggleNightMode()" title="夜晚模式">
+        <img id="modeIcon" src="img/moon.png" alt="夜晚模式" />
+    </button>
     <h1>103下學期五專三年級Javascript程式設計課程</h1>
     <div style="
             display: flex;
@@ -16,7 +19,6 @@
         ">
             <a href="index.html">返回首頁</a>
             <a href="#" onclick="loadPage('about.html')">關於我</a>
-            <a href="#" onclick="loadPage('research.html')">心理狀態</a>
             <a href="#" onclick="loadPage('homework.html')">N*N乘法表</a>
             <a href="#" onclick="loadPage('https://github-5b1g0039.github.io/waterPuzzle.html/')">水立方試管遊戲作業</a>
             <a href="#" onclick="loadPage('https://github-5b1g0039.github.io/react-app/')">React作業</a>
@@ -30,6 +32,28 @@
             function loadPage(url) {
                 const frame = document.getElementById('mainFrame');
                 frame.innerHTML = `<iframe src="${url}" style="width:100%;height:100%;border:none;"></iframe>`;
+            }
+            function toggleNightMode() {
+                document.body.classList.toggle('night-mode');
+                const icon = document.getElementById('modeIcon');
+                if (document.body.classList.contains('night-mode')) {
+                    icon.src = 'img/sun.png';
+                    icon.alt = '日間模式';
+                } else {
+                    icon.src = 'img/moon.png';
+                    icon.alt = '夜晚模式';
+                }
+            }
+            // 頁面載入時根據模式設定正確圖示
+            window.onload = function() {
+                const icon = document.getElementById('modeIcon');
+                if (document.body.classList.contains('night-mode')) {
+                    icon.src = 'img/sun.png';
+                    icon.alt = '日間模式';
+                } else {
+                    icon.src = 'img/moon.png';
+                    icon.alt = '夜晚模式';
+                }
             }
         </script>
 </body>

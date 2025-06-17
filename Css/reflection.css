@@ -1,0 +1,23 @@
+body {
+            margin: 0;
+            padding: 0;
+            background: none;
+        }
+        .mainFrame {
+            width: 80%;
+            margin: 40px auto;
+            padding: 32px 24px;
+            background-color: #fff;
+            color: #222;
+            border-radius: 8px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            font-size: 1.3rem;
+            line-height: 1.8;
+            border: 3px solid #ff8b47;
+            box-sizing: border-box;
+        }
+        h2 {
+            text-align: center;
+            color: #ff8b47;
+            margin-top: 0;
+        }

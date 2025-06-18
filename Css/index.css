@@ -1,51 +1,33 @@
+/* 基本版面設計 */
 html, body {
-    height: 100%;
     margin: 0;
-}
-body {
+    padding: 0;
+    height: 100%;
+    font-family: "Comic Sans MS", "Segoe UI", cursive;
+  }
+  
+  /* 白天背景 */
+  body {
     background-image: url('../img/background.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-h1 {
-    color: white;
-    text-align: center; /* 讓標題置中 */
-}
-a:link {
-    color: rgb(255, 248, 248);
-}
-a {
-    color: white;
-    background-color: rgb(253, 154, 61);
-    text-decoration: none;
-    padding: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    display: inline-block;
-    margin: 5px; /* 增加按鈕間距 */
-}
-.button-container {
-    text-align: center; /* 讓按鈕置中 */
-    margin-top: 20px;
-}
-.mainFrame{
-    width: 50%;
-    height: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    font-size: 2rem;
-    color: #333;
-    border: 5px solid rgb(255, 139, 71);
-    background-color: rgba(255,255,255,0.15);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px; /*調整邊框圓弧*/
-}
-.night-btn {
+  }
+  
+  /* 標題 */
+  h1 {
+    display: table;
+    margin: 40px auto 0 auto;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 25px;
+    border-radius: 12px;
+    color: rgb(10, 6, 0);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  }
+  
+  /* 夜間切換按鈕 */
+  .night-btn {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -53,25 +35,153 @@ a {
     border: none;
     cursor: pointer;
     z-index: 1000;
-}
-.night-btn img {
+  }
+  
+  .night-btn img {
     width: 40px;
     height: 40px;
-}
-body.night-mode {
+  }
+  
+  /* 主內容框 */
+  .mainFrame {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    border: 5px solid #ff8b47;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* 按鈕容器響應式排列 */
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    width: 90%;
+  }
+  
+  /* 可愛圓圓按鈕樣式 */
+  a {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    min-width: 140px;
+    text-align: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #ffc107;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 夜間模式樣式 */
+  body.night-mode {
     background-image: url('../img/backgroundnight.png');
-    background-color: #222 !important;
+    background-color: #222;
     color: #eee;
-}
-body.night-mode .mainFrame {
-    background-color: rgba(30,30,30,0.8);
-    color: #eee;
-}
-body.night-mode h1 {
+  }
+  
+  body.night-mode h1 {
     color: #ffd700;
-}
-body.night-mode a {
+  }
+  
+  body.night-mode a {
     background-color: #444;
     color: #ffd700;
-    border-color: #ffd700;
-}
+    border: none;
+  }
+  
+  body.night-mode a:hover {
+    background-color: #666;
+    color: white;
+  }
+  
+  body.night-mode .mainFrame {
+    background-color: rgba(30,30,30,0.8);
+    color: #eee;
+  }
+  
+  /* 響應式：手機版調整 */
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+      padding: 0 10px;
+    }
+  
+    a {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  
+    .mainFrame {
+      width: 95%;
+      padding: 15px;
+      font-size: 1rem;
+    }
+  
+    .night-btn img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  
+  /* 名言區樣式 */
+  .quote-box {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  .quote-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 25px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .quote-btn:hover {
+    background-color: #ffc107;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.night-mode .quote-box {
+    background: rgba(50, 50, 50, 0.8);
+    color: #ffd700;
+    box-shadow: none;
+  }
+  
+  body.night-mode .quote-btn {
+    background-color: #444;
+    color: #ffd700;
+  }
+  
+  body.night-mode .quote-btn:hover {
+    background-color: #666;
+    color: white;
+  }
+  
